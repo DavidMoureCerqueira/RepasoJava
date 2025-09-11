@@ -29,9 +29,9 @@ public class Product {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.nombre);
-        hash = 89 * hash + this.precio;
+        int hash = 7;
+        hash = 47 * hash + Objects.hashCode(this.nombre);
+        hash = 47 * hash + this.precio;
         return hash;
     }
 
@@ -52,4 +52,7 @@ public class Product {
         }
         return Objects.equals(this.nombre, other.nombre);
     }
+
+    
 }
+
