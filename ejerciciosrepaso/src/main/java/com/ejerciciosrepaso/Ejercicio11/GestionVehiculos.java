@@ -22,9 +22,13 @@ public class GestionVehiculos {
         System.out.println(coleccion.toString());
         
     }
-    public void buscar(String matricula){
+    public Vehiculo buscar(String matricula){
+        Vehiculo vehiculo;
         if(coleccion.containsKey(matricula)){
-           
+           vehiculo=new Vehiculo(matricula);
+           return vehiculo;
         }
+        return null;
+        
     }
 }
