@@ -2,8 +2,6 @@ package com.ejerciciosrepaso.Ejercicio6;
 
 public class Fibonacci {
 
-
-public class Palindromo {
     public static void main(String[] args) {
         int n = 10; // primeros 10 números
 

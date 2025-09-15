@@ -16,7 +16,7 @@ public class Primos {
     public static boolean esPrimo(int numero) {
 
         for (int i=2;i<numero ;i++ ) {
-                if(i numero%i==0){
+                if(numero%i==0){
                     return false;
                 }
             }
