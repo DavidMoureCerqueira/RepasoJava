@@ -1,6 +1,9 @@
+package com.ejerciciosrepaso.Ejercicio7;
 class Coche {
     private String marca;
     private int velocidad;
+
+
 
     public Coche(String marca){
         this.marca=marca;
