@@ -1,23 +1,26 @@
-package com.ejerciciosrepaso.Ejercicio4;
+package com.ejerciciosrepaso.Ejercicio5;
 
-public class Palindromo {
+public class Primos {
     public static void main(String[] args) {
-        String palabra = "Reconocer";
-        palabra=palabra.replaceAll("\\s+","").toLowerCase();
-        boolean esPalindromo = true;
+        int limite = 50;
 
-        for (int posIni = 0; posIni < palabra.length()/2; posIni++) {
-            int posFin=palabra.length()-1-posIni;
-            if(palabra.charAt(posIni)!=(palabra.charAt(posFin))){
-                esPalindromo=false;
+        System.out.println("Los numeros primos son:");
+        for (int i = 2; i <= limite; i++) {
+            if(esPrimo(i)){
+                
+                     System.out.print(" "+i);
             }
-            
-        }
-
-        if (esPalindromo) {
-            System.out.println(palabra + " es un palíndromo.");
-        } else {
-            System.out.println(palabra + " no es un palíndromo.");
         }
     }
+
+    public static boolean esPrimo(int numero) {
+
+        for (int i=2;i<numero ;i++ ) {
+                if(i numero%i==0){
+                    return false;
+                }
+            }
+        return true;
+        }
+       
 }

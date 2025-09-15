@@ -1,23 +1,26 @@
-package com.ejerciciosrepaso.Ejercicio4;
+class Coche {
+    private String marca;
+    private int velocidad;
 
-public class Palindromo {
-    public static void main(String[] args) {
-        String palabra = "Reconocer";
-        palabra=palabra.replaceAll("\\s+","").toLowerCase();
-        boolean esPalindromo = true;
+    public Coche(String marca){
+        this.marca=marca;
+        this.velocidad=0;
+    }
 
-        for (int posIni = 0; posIni < palabra.length()/2; posIni++) {
-            int posFin=palabra.length()-1-posIni;
-            if(palabra.charAt(posIni)!=(palabra.charAt(posFin))){
-                esPalindromo=false;
-            }
-            
+    public void acelerar(int incremento){
+        this.velocidad+=incremento;
+    }
+    public void frenar (int decremento){
+        if(this.velocidad-decremento<0){
+            System.out.println("No es posible frenar tanto el coche!!");
         }
-
-        if (esPalindromo) {
-            System.out.println(palabra + " es un palíndromo.");
-        } else {
-            System.out.println(palabra + " no es un palíndromo.");
+        else{
+            this.velocidad-=decremento;
         }
     }
+    @Override
+    public String toString(){
+        return String.format("El coche de la marca %s va a una velocidad de %d km/h %n", this.marca, this.velocidad);
+    }
 }
+

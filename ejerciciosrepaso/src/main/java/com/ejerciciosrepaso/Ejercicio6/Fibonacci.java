@@ -1,23 +1,18 @@
-package com.ejerciciosrepaso.Ejercicio4;
-
-public class Palindromo {
+public class Fibonacci {
     public static void main(String[] args) {
-        String palabra = "Reconocer";
-        palabra=palabra.replaceAll("\\s+","").toLowerCase();
-        boolean esPalindromo = true;
+        int n = 10; // primeros 10 números
 
-        for (int posIni = 0; posIni < palabra.length()/2; posIni++) {
-            int posFin=palabra.length()-1-posIni;
-            if(palabra.charAt(posIni)!=(palabra.charAt(posFin))){
-                esPalindromo=false;
-            }
-            
-        }
-
-        if (esPalindromo) {
-            System.out.println(palabra + " es un palíndromo.");
-        } else {
-            System.out.println(palabra + " no es un palíndromo.");
+        int num1=0;
+        int num2=1;
+        int contador=1;
+        System.out.printf("Los primeros %d numero de fibonacci son:", n);
+        while(contador<=n){
+            int temp;
+            temp=num1;
+            num1=num2+temp;
+            num2=temp;
+            System.out.println(temp);
+            contador++;
         }
     }
 }
