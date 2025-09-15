@@ -6,11 +6,18 @@ public class Palindromo {
         String palabra = "Reconocer";
         palabra=palabra.replaceAll("\\s+","").toLowerCase();
         boolean esPalindromo = true;
+        
+        // StringBuilder sb= new StringBuilder(palabra);
+        // String palabra2=sb.reverse().toString();
+
+
+
 
         for (int posIni = 0; posIni < palabra.length()/2; posIni++) {
             int posFin=palabra.length()-1-posIni;
             if(palabra.charAt(posIni)!=(palabra.charAt(posFin))){
                 esPalindromo=false;
+                break;
             }
             
         }
